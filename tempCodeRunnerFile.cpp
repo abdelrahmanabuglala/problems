@@ -2,21 +2,24 @@
 using namespace std;
 int main()
 {
-    int n, h, y, x = 0;
+    int n, h, x = 0;
     cin >> n >> h;
+    int arr[n];
     for (int i = 0; i < n; i++)
     {
-        cin >> y;
-        if (y < h)
-        {
-            x++;
-        }
-        else
+        cin >> arr[i];
+    }
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] > h)
         {
             x += 2;
         }
+        else
+        {
+            x++;
+        }
     }
-
     cout << x;
 
     return 0;
