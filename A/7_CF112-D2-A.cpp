@@ -14,7 +14,7 @@ char convertToUpper(char a)
 {
   if ('a' <= a && a <= 'z')
   {
-    a -= 'a' - 'A';
+    a -= ('a' - 'A');
   }
   return a;
 }
