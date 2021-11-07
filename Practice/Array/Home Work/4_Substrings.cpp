@@ -7,9 +7,16 @@ string SubString(string x)
     {
         for (int j = 0; j < (x.size() - i); j++)
         {
-            cout << x[j] << ",";
+            for (int k = i; k <= j + i; k++)
+            {
+                cout << x[k];
+            }
+            if (j < (x.size() - i) - 1)
+            {
+                cout << " ,";
+            }
         }
-        cout << "\n"
+        cout << "\n";
     }
     return 0;
 }
