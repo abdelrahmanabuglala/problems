@@ -21,6 +21,27 @@
         }
       ],
       "preLaunchTask": "C/C++: g++.exe build active file"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "c:\\Working\\problems\\Practice\\Array\\Home Work",
+      "environment": [],
+      "program": "c:\\Working\\problems\\Practice\\Array\\Home Work\\build\\Debug\\outDebug",
+      "internalConsoleOptions": "openOnSessionStart",
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
+      "externalConsole": false,
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
     }
   ]
 }
