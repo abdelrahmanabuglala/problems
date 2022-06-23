@@ -14,14 +14,25 @@ void fl()
 int main()
 {
     fl();
-    int x, y, z = 1;
-    cin >> x >> y;
-    int s = x;
-    while (x % 10 != 0 && (x - y) % 10 != 0)
+    int n, x = 0;
+    cin >> n;
+    int home[n] = {}, away[n] = {};
+
+    for (int i = 0; i < 2 * n; i++)
     {
-        z++;
-        x += s;
+        cin >> home[i] >> away[i];
     }
-    cout << z;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if (home[i] == away[j])
+            {
+                x++;
+            }
+        }
+    }
+    cout << x;
+
     return 0;
 }
