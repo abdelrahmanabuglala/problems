@@ -18,11 +18,10 @@ int main()
     bool a = true;
     cin >> n >> k;
     char arr[n];
-    char letters[] = "abcdefghijklmnopqrstuvwxyz";
 generate:
     for (int i = 0; i < n; i++)
     {
-        arr[i] = letters[rand() % 26];
+        arr[i] = 'a' + rand() % 26;
     }
     set<int> s1;
     for (int i = 0; i < n; i++)
