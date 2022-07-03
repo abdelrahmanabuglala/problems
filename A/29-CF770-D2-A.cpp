@@ -15,36 +15,15 @@ int main()
 {
     fl();
     int n, k;
-    bool a = true;
     cin >> n >> k;
-    char arr[n];
-generate:
-    for (int i = 0; i < n; i++)
+    vector<char> v;
+    for (int i = 0; i < k; i++)
     {
-        arr[i] = 'a' + rand() % 26;
-    }
-    set<int> s1;
-    for (int i = 0; i < n; i++)
-    {
-        s1.insert(arr[i]);
+        v.push_back('a' + i);
     }
     for (int i = 0; i < n; i++)
     {
-        if (s1.size() != k || arr[i] == arr[i + 1])
-        {
-            a = false;
-        }
-    }
-    if (a == false)
-    {
-        goto generate;
-    }
-    else
-    {
-        for (int i = 0; i < n; i++)
-        {
-            cout << arr[i];
-        }
+        cout << v[i % k];
     }
 
     return 0;
