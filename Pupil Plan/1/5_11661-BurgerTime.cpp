@@ -14,16 +14,16 @@ void fl()
 int main()
 {
     fl();
-    int l, a = 0, b = 0, c = abs(a - b);
-    ;
-    string s;
+    int l;
     cin >> l;
     while (l)
     {
+        int a = 0, b = 0, d = 0, c = 3000000;
+        string s;
         cin >> s;
         for (int i = 1; i <= l; i++)
         {
-            if (s[i - 1] != '.' || 'Z')
+            if (s[i - 1] != '.' && s[i - 1] != 'Z')
             {
                 if (s[i - 1] == 'R')
                 {
@@ -34,17 +34,25 @@ int main()
                     b = i;
                 }
 
-                if (abs(a - b) < c || c != 0)
+                if (abs(a - b) < c && a != 0 && b != 0)
                 {
                     c = abs(a - b);
                 }
             }
             else if (s[i - 1] == 'Z')
             {
-                c = 0;
+                d++;
             }
         }
-        cout << c << "\n";
+        if (d > 0)
+        {
+            cout << 0 << "\n";
+        }
+        else
+        {
+            cout << c << "\n";
+        }
+
         cin >> l;
     }
 

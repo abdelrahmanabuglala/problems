@@ -15,36 +15,24 @@ int main()
 {
     fl();
     int n;
-    unsigned int x = 0;
+    long long int sum = 0, num, smallest_odd_number = 1e9 + 5;
     cin >> n;
-    int arr[n];
     for (int i = 0; i < n; i++)
     {
-        cin >> arr[i];
-    }
-    unsigned int sum = arr[0];
-    for (int i = 1; i < n; i++)
-    {
-        sum += arr[i];
-        if (sum % 2 == 0)
+        cin >> num;
+        sum += num;
+        if (num < smallest_odd_number && num % 2 != 0)
         {
-            x = sum;
+            smallest_odd_number = num;
         }
     }
-    if (x == 0)
+    if (sum % 2 == 0)
     {
-        if (arr[0] % 2 == 0)
-        {
-            cout << arr[0];
-        }
-        else
-        {
-            cout << 0;
-        }
+        cout << sum;
     }
     else
     {
-        cout << x;
+        cout << sum - smallest_odd_number;
     }
 
     return 0;

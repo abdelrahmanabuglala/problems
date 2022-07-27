@@ -14,37 +14,35 @@ void fl()
 int main()
 {
     fl();
-    int b, n, owe, owed, amount, owes[20];
-    cin >> b >> n;
-    while (b)
+    int b, n;
+    while (cin >> b >> n && b)
     {
-        for (int i = 0; i < b; ++i)
+        int x, y, v, arr[21] = {}, a = 0;
+        for (int i = 1; i <= b; i++)
         {
-            cin >> owes[i];
+            cin >> arr[i];
         }
-        while (n--)
+        for (int i = 0; i < n; i++)
         {
-            cin >> owe >> owed >> amount;
-
-            owes[owe - 1] -= amount;
-            owes[owed - 1] += amount;
+            cin >> x >> y >> v;
+            arr[x] -= v;
+            arr[y] += v;
         }
-        bool positive(true);
-
-        for (int i = 0; i < b; ++i)
+        for (int i = 1; i <= b; i++)
         {
-            if (owes[i] < 0)
+            if (arr[i] < 0)
             {
-                positive = false;
+                a++;
             }
         }
-
-        if (positive)
-            cout << "S\n";
-        else
+        if (a > 0)
+        {
             cout << "N\n";
-
-        cin >> b >> n;
+        }
+        else
+        {
+            cout << "S\n";
+        }
     }
 
     return 0;
