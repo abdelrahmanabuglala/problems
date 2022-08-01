@@ -28,13 +28,11 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "c:\\Working\\problems\\Practice\\Array\\Home Work",
-      "environment": [],
-      "program": "c:\\Working\\problems\\Practice\\Array\\Home Work\\build\\Debug\\outDebug",
-      "internalConsoleOptions": "openOnSessionStart",
-      "MIMode": "gdb",
-      "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
       "externalConsole": false,
+      "cwd": "c:/Working/problems/Pupil Plan/2-3",
+      "program": "c:/Working/problems/Pupil Plan/2-3/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:/MinGW/bin/gdb.exe",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
