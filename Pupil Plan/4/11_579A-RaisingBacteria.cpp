@@ -14,5 +14,17 @@ void fl()
 int main()
 {
     fl();
+    int x, c = 0;
+    cin >> x;
+    while (x > 0)
+    {
+        if ((x & 1) == 1)
+        {
+            c++;
+        }
+        x >>= 1;
+    }
+    cout << c;
+
     return 0;
 }
