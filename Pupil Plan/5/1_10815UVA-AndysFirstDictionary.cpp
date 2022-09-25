@@ -16,6 +16,6 @@ int main()
     fl();
     int x;
     cin>>x;
-    cout<<x<<endl;
+    cout<<x;
     return 0;
 }
