@@ -14,8 +14,39 @@ void fl()
 int main()
 {
     fl();
-    int x;
-    cin>>x;
-    cout<<x;
+    string line, word = "";
+    set<string> st;
+    while (getline(cin, line))
+    {
+        line += ' ';
+        for (int i = 0; i < line.length(); i++)
+        {
+            if (isalpha(line[i]))
+            {
+                line[i] = tolower(line[i]);
+            }
+            else
+            {
+                line[i] = ' ';
+            }
+            if (isalpha(line[i]))
+            {
+                word += line[i];
+            }
+            else
+            {
+                if (word != "")
+                {
+                    st.insert(word);
+                    word = "";
+                }
+            }
+        }
+    }
+    for (auto i = st.begin(); i != st.end(); i++)
+    {
+        cout << *i << endl;
+    }
+
     return 0;
 }

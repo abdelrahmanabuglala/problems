@@ -14,8 +14,32 @@ void fl()
 int main()
 {
     fl();
-    int x;
-    cin>>x;
-    cout<<x;
+    int n;
+
+    cin >> n;
+    while (n)
+    {
+        priority_queue<int, vector<int>, greater<int>> q;
+
+        for (int i = 0; i < n; i++)
+        {
+            int x;
+            cin >> x;
+            q.push(x);
+        }
+        int sum = 0, tot = 0;
+        while (q.size() > 1)
+        {
+            sum = q.top();
+            q.pop();
+            sum += q.top();
+            q.pop();
+            tot += sum;
+            q.push(sum);
+        }
+        cout << tot << endl;
+        cin >> n;
+    }
+
     return 0;
 }
